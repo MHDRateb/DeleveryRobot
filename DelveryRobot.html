@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="Robot.js"></script>
+
+	<style>
+		* {
+			font-family: 'Open Sans', sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Astar</h1>
+	<form>
+		<label for="initail">Initial state:</label><br>
+		<input class="form-control" type="text" value="" id="location"><br>
+		<input class="form-control" type="number" value="" id="smallPackage"><br>
+		<input class="form-control" type="number" value="" id="largPackage"><br>
+		<input class="form-control" type="number" value="" id="meduimPackageA"><br>
+		<input class="form-control" type="number" value="" id="meduimPackageB"><br>
+		<br>
+		<label for="goal">Goal State:</label><br>
+		<input class="form-control" type="text" value="T" id="Glocation"><br>
+		<input class="form-control" type="number" value="0" id="GsmallPackage"><br>
+		<input class="form-control" type="number" value="0" id="GlargPackage"><br>
+		<input class="form-control" type="number" value="0" id="GmeduimPackageA"><br>
+		<input class="form-control" type="number" value="0" id="GmeduimPackageB"><br>
+		<br>
+		<button onclick="setParameter(event)" type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+	<script type="text/javascript">
+		function setParameter(event) {
+			console.clear();
+
+			var loc1 = document.querySelector('#location');
+			var Sp1 = document.querySelector('#smallPackage');
+			var Lp1 = document.querySelector('#largPackage');
+			var Ma1 = document.querySelector('#meduimPackageA');
+			var Mb1 = document.querySelector('#meduimPackageB');
+
+			loc = loc1.value;
+			Sp = parseInt(Sp1.value)
+			Lp = parseInt(Lp1.value)
+			Ma = parseInt(Ma1.value)
+			Mb = parseInt(Mb1.value)
+
+			var Gloc1 = document.querySelector('#Glocation');
+			var GSp1 = document.querySelector('#GsmallPackage');
+			var GLp1 = document.querySelector('#GlargPackage');
+			var GMa1 = document.querySelector('#GmeduimPackageA');
+			var GMb1 = document.querySelector('#GmeduimPackageB');
+
+			Gloc = loc1.value;
+			GSp = parseInt(GSp1.value)
+			GLp = parseInt(GLp1.value)
+			GMa = parseInt(GMa1.value)
+			GMb = parseInt(GMb1.value)
+
+			event.preventDefault();
+			main();
+		}
+	</script>
+</body>
+
+</html>
